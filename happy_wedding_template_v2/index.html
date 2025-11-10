@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Thiệp cưới online - Văn Huy & Bích Ngọc</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- NAV -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="nav-initials">VH ❤ BN</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#hero" data-scroll>Trang chủ</a>
+        <a href="#couple-story" data-scroll>Cặp đôi</a>
+        <a href="#story" data-scroll>Chuyện chúng mình</a>
+        <a href="#bigday" data-scroll>The Big Day</a>
+        <a href="#album" data-scroll>Album</a>
+        <a href="#events" data-scroll>Sự kiện</a>
+        <a href="#guestbook" data-scroll>Sổ lưu bút</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>   <!-- lớp nền chạy mượt -->
+    <div class="hero-content container">
+      <p class="hero-subtitle">SAVE THE DATE</p>
+      <h1 class="hero-title">Văn Huy &amp; Bích Ngọc</h1>
+      <p class="hero-date">22 tháng 11, 2025</p>
+
+      <div class="hero-actions">
+        <button class="btn btn-primary" data-scroll="#guestbook">Gửi lời chúc</button>
+        <button class="btn btn-outline" data-scroll="#rsvp">Xác nhận tham dự</button>
+        <button class="btn btn-ghost" id="open-gift">Hộp mừng cưới</button>
+      </div>
+
+      <!-- <div class="hero-initials">
+        <span>VH</span>
+        <span>&amp;</span>
+        <span>BN</span>
+      </div> -->
+      <p class="hero-hint">Kéo xuống để xem thiệp cưới</p>
+    </div>
+  </section>
+
+  <!-- STORY / CẶP ĐÔI + NGÀY ẤY -->
+  <section class="section" id="couple-story">
+    <div class="container">
+      <h2 class="section-title">Cặp đôi</h2>
+      <p class="section-subtitle">
+        Chúng mình rất vui khi được chia sẻ ngày đặc biệt này với bạn.
+      </p>
+      <!-- 2 ẢNH CẶP ĐÔI, HOVER ĐỂ HIỆN THÔNG TIN -->
+      <div class="story-photos">
+        <!-- CHỒNG -->
+        <div class="story-panel story-panel--groom">
+          <div class="story-photo">
+            <img src="images/anh cuoi 4.jpg" alt="Chú rể Văn Huy" />
+          </div>
+          <div class="story-info">
+            <h3 class="story-name">Văn Huy</h3>
+            <p class="story-role">THE GROOM</p>
+            <p class="story-text">
+              Là một người hiền lành nhưng nói nhiều, thích đi du lịch và yêu gia
+              đình. Luôn coi trọng tình cảm và yêu thương mọi người xung quanh.
+            </p>
+            <span class="story-more">Xem thêm ↓</span>
+          </div>
+        </div>
+
+        <!-- VỢ -->
+        <div class="story-panel story-panel--bride">
+          <div class="story-photo">
+            <img src="images/anh cuoi 6.jpg" alt="Cô dâu Bích Ngọc" />
+          </div>
+          <div class="story-info">
+            <h3 class="story-name">Bích Ngọc</h3>
+            <p class="story-role">THE BRIDE</p>
+            <p class="story-text">
+              Cô gái hay cười, sống nội tâm, thích những chuyến đi, thích hoa và
+              những điều nhỏ xinh. Dịu dàng nhưng rất kiên định.
+            </p>
+            <span class="story-more">Xem thêm ↓</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TRÁI TIM Ở GIỮA -->
+    <div class="story-heart-wrap">
+      <div class="story-heart"></div>
+    </div>
+
+    <!-- “VÀ.. NGÀY ẤY ĐÃ TỚI” + TÊN 2 GIA ĐÌNH -->
+    <div class="container story-bottom">
+      <h2 class="story-heading">Và.. Ngày ấy đã tới</h2>
+      <p class="story-paragraph">
+        Thật vui vì được gặp và đón tiếp các bạn trong một dịp đặc biệt – Ngày cưới
+        của chúng mình. Chúng mình muốn gửi đến bạn những lời cảm ơn sâu sắc nhất
+        và để bạn biết rằng chúng mình rất hạnh phúc khi thấy bạn ở đó. Cảm ơn các
+        bạn rất nhiều vì sự hiện diện cùng những lời chúc tốt đẹp mà bạn đã dành
+        cho chúng mình nha!
+      </p>
+
+      <p class="story-sign">Văn Huy &amp; Bích Ngọc</p>
+
+      <div class="story-parents">
+        <div class="story-parent-block">
+          <p>Con ông: <strong>NGUYỄN VĂN DẦN</strong></p>
+          <p>Con bà: <strong>LÊ THỊ THỰC</strong></p>
+        </div>
+        <div class="story-parent-block">
+          <p>Con ông: <strong>DƯƠNG NGỌC HẢI</strong></p>
+          <p>Con bà: <strong>LÊ THỊ BÍCH</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="section section-alt" id="story">
+    <div class="container">
+      <h2 class="section-title">Chuyện chúng mình</h2>
+      <p class="section-subtitle">Bắt đầu thật tình cờ và đầy bất ngờ...</p>
+
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <p class="timeline-date">Một ngày đẹp trời...</p>
+            <h3 class="timeline-title">Tin nhắn đầu tiên</h3>
+            <p class="timeline-text">
+              Vào một ngày rất bình thường, chú rể “lỡ” trả lời story của cô dâu. Từ vài câu chuyện vu vơ, chúng mình dần nói nhiều hơn mỗi ngày...
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <p class="timeline-date">Những ngày bên nhau</p>
+            <h3 class="timeline-title">Vui – buồn – trưởng thành</h3>
+            <p class="timeline-text">
+              Chúng mình đã đi qua với nhau rất nhiều cung bậc cảm xúc: tiếng cười, nước mắt, cả những lúc yếu lòng nhưng vẫn luôn nắm tay nhau.
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <p class="timeline-date">13/04/2025</p>
+            <h3 class="timeline-title">Lời cầu hôn</h3>
+            <p class="timeline-text">
+              Một lời hứa cho chặng đường dài phía trước – “mình về chung một nhà nhé?”. Và câu trả lời là “Đồng ý!”.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- BIG DAY + COUNTDOWN -->
+  <section class="section" id="bigday">
+    <div class="container bigday-container">
+      <div class="bigday-text">
+        <h2 class="section-title">The Big Day!</h2>
+        <p class="section-subtitle">
+          Một lời chúc của bạn chắc chắn sẽ làm cho đám cưới của chúng mình thêm trọn vẹn.
+        </p>
+        <p class="bigday-names">Văn Huy &amp; Bích Ngọc</p>
+        <p class="bigday-date">22 tháng 11, 2025 - 16:00</p>
+      </div>
+
+      <div class="countdown">
+        <div class="count-box">
+          <span id="days">0</span>
+          <small>Ngày</small>
+        </div>
+        <div class="count-box">
+          <span id="hours">0</span>
+          <small>Giờ</small>
+        </div>
+        <div class="count-box">
+          <span id="minutes">0</span>
+          <small>Phút</small>
+        </div>
+        <div class="count-box">
+          <span id="seconds">0</span>
+          <small>Giây</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALBUM -->
+  <section class="section section-alt" id="album">
+    <div class="container">
+      <h2 class="section-title">Album Hình Cưới</h2>
+      <p class="section-subtitle">Một vài khoảnh khắc nhỏ trong câu chuyện lớn của chúng mình.</p>
+
+      <div class="album-grid">
+        <img src="images/anh cuoi 1.jpg" alt="Ảnh cưới 1" />
+        <img src="images/anh cuoi 2.jpg" alt="Ảnh cưới 2" />
+        <img src="images/anh cuoi 3.jpg" alt="Ảnh cưới 3" />
+        <img src="images/anh cuoi 4.jpg" alt="Ảnh cưới 4" />
+        <img src="images/anh cuoi 5.jpg" alt="Ảnh cưới 5" />
+        <img src="images/anh cuoi 6.jpg" alt="Ảnh cưới 6" />
+        <img src="images/anh cuoi 7.jpg" alt="Ảnh cưới 7" />
+        <img src="images/anh cuoi 8.jpg" alt="Ảnh cưới 8" />
+        <img src="images/anh cuoi 9.jpg" alt="Ảnh cưới 9" />
+        <img src="images/anh cuoi 10.jpg" alt="Ảnh cưới 10" />
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section class="section" id="events">
+    <div class="container">
+      <h2 class="section-title">Sự Kiện Cưới</h2>
+      <p class="section-subtitle">
+        Tình yêu đích thực là luôn ở cạnh nhau trong những ngày đẹp nhất và cả những ngày khó khăn nhất.
+      </p>
+
+      <div class="events-grid">
+        <!-- Event 1 -->
+        <article class="event-card">
+          <h3 class="event-title">LỄ THÀNH HÔN</h3>
+          <p class="event-time">11:00 - 23/11/2025</p>
+          <p class="event-location">
+            Xóm Thống Nhất, Xã Thường Thắng, Huyện Hiệp Hòa, Tỉnh Bắc Giang
+          </p>
+          <div class="event-actions">
+            <a class="btn btn-small" href="https://maps.app.goo.gl/1mQz9G7m2KVksuQf8" target="_blank" rel="noopener">
+              Xem bản đồ
+            </a>
+          </div>
+        </article>
+
+        <!-- Event 2 -->
+        <article class="event-card">
+          <h3 class="event-title">LỄ VU QUY</h3>
+          <p class="event-time">10:00 - 23/11/2025</p>
+          <p class="event-location">
+            Xóm 2, Thôn Hương Thịnh, xã Sơn Thịnh, huyện Hiệp Hòa, tỉnh Bắc Giang
+          </p>
+          <div class="event-actions">
+            <a class="btn btn-small" href="https://maps.app.goo.gl/35ep6v1AMSMDGj6H6" target="_blank" rel="noopener">
+              Xem bản đồ
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUESTBOOK -->
+  <section class="section section-alt" id="guestbook">
+    <div class="container">
+      <h2 class="section-title">Sổ Lưu Bút</h2>
+      <p class="section-subtitle">Vài dòng gửi gắm đến chúng mình nhé 💌</p>
+
+      <div class="guestbook-layout">
+        <div class="guestbook-messages">
+          <h3 class="guestbook-heading">Lời chúc</h3>
+          <ul id="guestbook-list">
+            <li><strong>Huy Thanh Jewelry</strong><br>Chúc mừng hai bạn luôn hạnh phúc, đồng hành cùng nhau trên mọi chặng đường.</li>
+            <li><strong>Bạn thân</strong><br>Chúc hai bạn trăm năm hạnh phúc, sớm có baby cute nha!</li>
+          </ul>
+        </div>
+
+        <form id="guestbook-form" class="guestbook-form">
+          <h3 class="guestbook-heading">Gửi lời chúc</h3>
+          <label>
+            Tên của bạn
+            <input type="text" name="name" required placeholder="Người gửi..." />
+          </label>
+          <label>
+            Lời chúc
+            <textarea name="message" rows="3" required placeholder="Viết vài lời yêu thương gửi đến cô dâu chú rể..."></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary">Gửi lời chúc</button>
+          <p class="form-note">* Lời chúc sẽ hiển thị ở khung bên trái.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section class="section" id="rsvp">
+    <div class="container">
+      <h2 class="section-title">Xác Nhận Tham Dự</h2>
+      <p class="section-subtitle">
+        Bạn vui lòng cho chúng mình biết để chuẩn bị đón tiếp chu đáo hơn nhé.
+      </p>
+
+      <form id="rsvp-form" class="rsvp-form">
+        <div class="rsvp-grid">
+          <label>
+            Họ và tên
+            <input type="text" name="fullname" required placeholder="Họ và tên" />
+          </label>
+          <label>
+            Số điện thoại
+            <input type="tel" name="phone" required placeholder="Số điện thoại" />
+          </label>
+          <label>
+            Bạn có tham dự không?
+            <select name="attend" required>
+              <option value="">-- Chọn --</option>
+              <option value="yes">Mình sẽ tham dự</option>
+              <option value="no">Mình không tham dự được</option>
+            </select>
+          </label>
+          <label>
+            Ghi chú
+            <textarea name="note" rows="2" placeholder="Ghi chú thêm (số người đi cùng, dị ứng đồ ăn, v.v.)"></textarea>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Gửi xác nhận</button>
+        <p class="form-note">
+          (Lưu ý: Form này chỉ là thông báo cảm ơn bạn đã gửi, không lưu dữ liệu thực tế)
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p class="footer-names">Văn Huy &amp; Bích Ngọc</p>
+      <p class="footer-text">
+        Cảm ơn bạn đã dành thời gian đọc thiệp cưới và chia sẻ niềm vui với chúng mình.
+      </p>
+    </div>
+  </footer>
+
+  <!-- GIFT MODAL -->
+  <div class="modal" id="gift-modal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="gift-title">
+      <button class="modal-close" id="close-gift" aria-label="Đóng">×</button>
+      <h2 id="gift-title">Hộp mừng cưới</h2>
+      <p class="modal-intro">
+        Nếu có thể, bạn hãy tới tham dự Đám cưới, chung vui và Mừng cưới trực tiếp cho chúng mình nhé.
+        Trong trường hợp không tiện, bạn có thể mừng cưới online tại đây 💌
+      </p>
+
+      <div class="gift-grid">
+        <div class="gift-card">
+          <h3>Mừng cưới đến Chú rể</h3>
+          <div class="gift-qr">
+            <img src="images/QR-Huy.jpg" alt="QR chú rể" />
+          </div>
+          <p>Ngân hàng: Vietcombank</p>
+          <p>Tên: Nguyen Van Huy</p>
+          <p>STK: 1022335501</p>
+        </div>
+
+        <div class="gift-card">
+          <h3>Mừng cưới đến Cô dâu</h3>
+          <div class="gift-qr">
+            <img src="images/QR-Ngoc.jpg" alt="QR cô dâu" />
+          </div>
+          <p>Ngân hàng: Vietcombank</p>
+          <p>Tên: Duong Thi Bich Ngoc</p>
+          <p>STK: 1038202660</p>
+        </div>
+      </div>
+      <p class="modal-thanks">Cảm ơn bạn rất nhiều vì tình cảm dành cho chúng mình! ❤️</p>
+    </div>
+  </div>
+
+  <!-- FLOATING BUTTONS -->
+  <div class="fab-container">
+    <button type="button" class="fab fab-chat" data-scroll="#guestbook" title="Gửi lời chúc">
+      💬
+    </button>
+    <button type="button" class="fab fab-gift" id="fab-open-gift" title="Hộp mừng cưới">
+      🎁
+    </button>
+    <button type="button" class="fab fab-rsvp" data-scroll="#rsvp" title="Xác nhận tham dự">
+      💌
+    </button>
+    <button type="button" class="fab fab-close" id="fab-hide" title="Ẩn menu">
+      ✕
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
