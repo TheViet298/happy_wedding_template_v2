@@ -21,10 +21,11 @@ document.querySelectorAll("[data-scroll]").forEach((el) => {
 
   // Danh sách ảnh của bạn trong thư mục images/
   const images = [
-    "images/anh cuoi 1.jpg",
-    "images/anh cuoi 2.jpg",
-    "images/anh cuoi 3.jpg",
-    "images/anh cuoi 4.jpg"
+    "images/1.jpg",
+    "images/2.jpg",
+    "images/3.jpg",
+    "images/19.jpg",
+    "images/20.jpg"
   ];
 
   let currentIndex = 0;
