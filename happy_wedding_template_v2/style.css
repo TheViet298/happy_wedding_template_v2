@@ -1135,51 +1135,30 @@ body {
   }
 }
 
-
-/* ============== ALBUM (desktop 3 cột, mobile 2 cột, giữ tỉ lệ ảnh) ============== */
+/* ============== ALBUM ============== */
 
 .album-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));  /* Desktop: đúng 3 cột */
-  gap: 1.4rem;
-  align-items: start;
-  margin-top: 2.2rem;
+  /* Desktop: 3 cột */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
 }
 
-/* Ảnh giống thẻ card nhỏ, nhưng vẫn giữ nguyên tỉ lệ gốc */
 .album-grid img {
-  display: block;
   width: 100%;
-  height: auto;                                /* quan trọng: giữ tỉ lệ, không crop */
-  border-radius: 20px;
-  padding: 0.6rem;
-  background: #fff;
-  border: 1px solid rgba(245, 200, 196, 0.7);
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.06);
+  display: block;
+  border-radius: 18px;
+  /* GIỮ TỈ LỆ ẢNH GỐC */
+  height: auto;          /* bỏ fixed height */
+  object-fit: cover;     /* cho ảnh fill khung mà không méo (có thể bỏ nếu muốn full 100%) */
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.06);
 }
 
-/* Tablet & mobile: 2 cột */
+/* MOBILE / TABLET: 2 cột như mẫu */
 @media (max-width: 900px) {
   .album-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-  }
-
-  .album-grid img {
-    border-radius: 18px;
-    padding: 0.5rem;
-  }
-}
-
-/* Màn rất nhỏ: thu gap lại chút */
-@media (max-width: 480px) {
-  .album-grid {
-    gap: 0.7rem;
-  }
-
-  .album-grid img {
-    border-radius: 16px;
-    padding: 0.45rem;
+    gap: 0.9rem;
   }
 }
 
