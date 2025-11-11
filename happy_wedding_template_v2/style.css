@@ -1475,9 +1475,10 @@ textarea {
   z-index: 60;
 }
 
-.fab-container.is-hidden {
+/* ❌ BỎ đoạn này đi (không dùng is-hidden nữa) */
+/* .fab-container.is-hidden {
   display: none;
-}
+} */
 
 .fab {
   width: 46px;
@@ -1493,8 +1494,11 @@ textarea {
   align-items: center;
   justify-content: center;
   box-shadow: 0 14px 32px rgba(240, 139, 139, 0.45);
-  transition: transform 0.14s ease, box-shadow 0.14s ease,
-    background-color 0.14s ease, opacity 0.14s ease;
+  transition:
+    transform 0.14s ease,
+    box-shadow 0.14s ease,
+    background-color 0.14s ease,
+    opacity 0.14s ease;
 }
 
 .fab:hover {
@@ -1515,6 +1519,30 @@ textarea {
   color: var(--primary);
   border: 1px solid rgba(240, 139, 139, 0.4);
 }
+
+/* ===== THU GỌN / MỞ RỘNG MENU ===== */
+/* Khi thu gọn: ẩn 3 nút trên, giữ lại nút .fab-close */
+.fab-container.fab-collapsed .fab:not(.fab-close) {
+  opacity: 0;
+  transform: translateY(10px) scale(0.7);
+  pointer-events: none;
+}
+
+/* ===== ICON CHUYỂN ĐỔI X / MENU ===== */
+
+/* Mặc định hiển thị X */
+#fab-hide .icon-menu {
+  display: none;
+}
+
+/* Khi thu gọn (fab-collapsed) thì đổi X -> ☰ */
+.fab-container.fab-collapsed #fab-hide .icon-x {
+  display: none;
+}
+.fab-container.fab-collapsed #fab-hide .icon-menu {
+  display: inline;
+}
+
 
 /* ============== RESPONSIVE ============== */
 

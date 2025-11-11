@@ -203,16 +203,34 @@ document.querySelectorAll("[data-scroll]").forEach((el) => {
   });
 })();
 
-// ===== Ẩn cụm nút tròn bên phải =====
+// ===== Ẩn/hiện cụm nút tròn bên phải =====
 (function floatingButtons() {
   const container = document.querySelector(".fab-container");
   const hideBtn = document.getElementById("fab-hide");
   if (!container || !hideBtn) return;
 
+  let collapsed = false;
+
+  function updateUI() {
+    if (collapsed) {
+      container.classList.add("fab-collapsed");
+      hideBtn.setAttribute("aria-label", "Mở menu");
+    } else {
+      container.classList.remove("fab-collapsed");
+      hideBtn.setAttribute("aria-label", "Ẩn menu");
+    }
+  }
+
   hideBtn.addEventListener("click", () => {
-    container.classList.add("is-hidden");
+    collapsed = !collapsed;
+    updateUI();
   });
+
+  // trạng thái ban đầu: menu mở
+  updateUI();
 })();
+
+
 
 // ===== Couple story: click để mở/đóng info trên mobile =====
 (function coupleStoryToggle() {
