@@ -1167,37 +1167,92 @@ body {
 .events-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: stretch;
 }
 
 .event-card {
   background: #fff;
-  border-radius: var(--radius-lg);
-  padding: 1.6rem 1.4rem 1.2rem;
+  border-radius: 26px;
   border: 1px solid rgba(245, 200, 196, 0.9);
-  box-shadow: var(--shadow-soft);
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 70px rgba(240, 139, 139, 0.2);
+}
+
+/* Ảnh trên cùng */
+.event-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.event-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.event-card:hover .event-image img {
+  transform: scale(1.05);
+}
+
+/* Nội dung dưới */
+.event-body {
+  padding: 1.6rem 1.5rem 1.7rem;
 }
 
 .event-title {
-  margin: 0 0 0.4rem;
-  font-size: 1.05rem;
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+  font-weight: 600;
 }
 
 .event-time {
   color: var(--primary);
   font-weight: 500;
-  font-size: 0.9rem;
-  margin: 0.2rem 0 0.5rem;
+  font-size: 0.95rem;
+  margin: 0.2rem 0 0.6rem;
 }
 
 .event-location {
   font-size: 0.9rem;
   color: var(--muted);
+  line-height: 1.6;
 }
 
 .event-actions {
-  margin-top: 0.9rem;
+  margin-top: 1rem;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .events-grid {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+  }
+
+  .event-card {
+    border-radius: 20px;
+  }
+
+  .event-image {
+    aspect-ratio: 4 / 3;
+  }
+
+  .event-body {
+    padding: 1.3rem 1.2rem 1.4rem;
+  }
 }
 
 /* ============== GUESTBOOK & RSVP ============== */
@@ -1598,6 +1653,98 @@ textarea {
     gap: 2rem;
     display: flex;
     flex-wrap: nowrap;
+  }
+}
+
+/* ============== MUSIC TOGGLE ============== */
+.music-toggle {
+  position: fixed;
+  left: 1.5rem;
+  bottom: 1.5rem;
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 1200;
+
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+
+/* icon bên trong */
+.music-toggle svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* loa */
+.music-toggle .speaker {
+  fill: #f86c7d;
+}
+
+/* sóng âm */
+.music-toggle .wave {
+  stroke: #f86c7d;
+}
+
+/* hiệu ứng hover nhẹ */
+.music-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.18);
+}
+
+/* vòng tròn pulse */
+.music-toggle::after {
+  content: "";
+  position: absolute;
+  inset: -7px;
+  border-radius: inherit;
+  border: 2px solid rgba(248, 108, 125, 0.55);
+  opacity: 0;
+  transform: scale(0.9);
+  animation: none;           /* ép tắt mọi animation mặc định */
+}
+/* khi đang phát nhạc => pulsating */
+.music-toggle.is-playing::after {
+  animation: music-pulse 1.4s ease-out infinite;
+}
+
+@keyframes music-pulse {
+  0% {
+    opacity: 0.7;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.4);
+  }
+}
+
+/* trạng thái tắt: sóng âm mờ đi */
+.music-toggle.is-muted .wave {
+  opacity: 0.15;
+}
+
+/* mobile: kéo sát mép 1 chút */
+@media (max-width: 768px) {
+  .music-toggle {
+    left: 1rem;
+    bottom: 1rem;
+    width: 42px;
+    height: 42px;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
   }
 }
 

@@ -245,3 +245,68 @@ document.querySelectorAll("[data-scroll]").forEach((el) => {
     }
   });
 })();
+
+// ===== NÚT NHẠC NỀN (SVG + PULSE) =====
+document.addEventListener("DOMContentLoaded", function () {
+  const audio = document.getElementById("bg-music");
+  const btn = document.getElementById("music-toggle");
+  if (!audio || !btn) {
+    console.warn("Không tìm thấy audio hoặc nút nhạc");
+    return;
+  }
+
+  audio.volume = 0.6;
+  let isPlaying = false;
+
+  function setPlayingUI(playing) {
+    isPlaying = playing;
+    if (playing) {
+      btn.classList.add("is-playing");
+      btn.classList.remove("is-muted");
+      btn.setAttribute("aria-label", "Tắt nhạc");
+    } else {
+      btn.classList.remove("is-playing");
+      btn.classList.add("is-muted");
+      btn.setAttribute("aria-label", "Bật nhạc");
+    }
+  }
+
+  function playMusic() {
+    audio
+      .play()
+      .then(() => {
+        setPlayingUI(true);
+      })
+      .catch((err) => {
+        console.warn("Không phát được nhạc:", err);
+        setPlayingUI(false);
+      });
+  }
+
+  function pauseMusic() {
+    audio.pause();
+    setPlayingUI(false);
+  }
+
+  // click để bật/tắt
+  btn.addEventListener("click", () => {
+    if (isPlaying) {
+      pauseMusic();
+    } else {
+      playMusic();
+    }
+  });
+
+  // khi tab bị ẩn thì tắt nhạc cho lịch sự
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "hidden" && isPlaying) {
+      pauseMusic();
+    }
+  });
+
+  // đảm bảo UI ban đầu là muted
+  setPlayingUI(false);
+});
+
+
+

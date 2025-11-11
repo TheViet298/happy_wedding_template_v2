@@ -7,7 +7,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />\
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
 
@@ -335,31 +335,47 @@
       </p>
 
       <div class="events-grid">
-        <!-- Event 1 -->
+        <!-- LỄ THÀNH HÔN -->
         <article class="event-card">
-          <h3 class="event-title">LỄ THÀNH HÔN</h3>
-          <p class="event-time">11:00 - 23/11/2025</p>
-          <p class="event-location">
-            Xóm Thống Nhất, Xã Thường Thắng, Huyện Hiệp Hòa, Tỉnh Bắc Giang
-          </p>
-          <div class="event-actions">
-            <a class="btn btn-small" href="https://maps.app.goo.gl/1mQz9G7m2KVksuQf8" target="_blank" rel="noopener">
-              Xem bản đồ
-            </a>
+          <div class="event-image">
+            <img src="images/13.jpg" alt="Chú rể - Lễ thành hôn" />
+          </div>
+
+          <div class="event-body">
+            <h3 class="event-title">LỄ THÀNH HÔN</h3>
+            <p class="event-time">11:00 - 23/11/2025</p>
+            <p class="event-location">
+              Xóm Thống Nhất, Xã Thường Thắng, Huyện Hiệp Hòa, Tỉnh Bắc Giang
+            </p>
+            <div class="event-actions">
+              <a class="btn btn-small"
+                href="https://maps.app.goo.gl/1mQz9G7m2KVksuQf8"
+                target="_blank" rel="noopener">
+                Xem bản đồ
+              </a>
+            </div>
           </div>
         </article>
 
-        <!-- Event 2 -->
+        <!-- LỄ VU QUY -->
         <article class="event-card">
-          <h3 class="event-title">LỄ VU QUY</h3>
-          <p class="event-time">10:00 - 23/11/2025</p>
-          <p class="event-location">
-            Xóm 2, Thôn Hương Thịnh, xã Sơn Thịnh, huyện Hiệp Hòa, tỉnh Bắc Giang
-          </p>
-          <div class="event-actions">
-            <a class="btn btn-small" href="https://maps.app.goo.gl/aV6s26GCM5yajTEt5" target="_blank" rel="noopener">
-              Xem bản đồ
-            </a>
+          <div class="event-image">
+            <img src="images/16.jpg" alt="Cô dâu - Lễ vu quy" />
+          </div>
+
+          <div class="event-body">
+            <h3 class="event-title">LỄ VU QUY</h3>
+            <p class="event-time">10:00 - 23/11/2025</p>
+            <p class="event-location">
+              Thôn Hương Thịnh, Xã Sơn Thịnh, Huyện Hiệp Hòa, Tỉnh Bắc Giang
+            </p>
+            <div class="event-actions">
+              <a class="btn btn-small"
+                href="https://maps.app.goo.gl/aV6s26GCM5yajTEt5"
+                target="_blank" rel="noopener">
+                Xem bản đồ
+              </a>
+            </div>
           </div>
         </article>
       </div>
@@ -376,8 +392,8 @@
         <div class="guestbook-messages">
           <h3 class="guestbook-heading">Lời chúc</h3>
           <ul id="guestbook-list">
-            <li><strong>Huy Thanh Jewelry</strong><br>Chúc mừng hai bạn luôn hạnh phúc, đồng hành cùng nhau trên mọi chặng đường.</li>
-            <li><strong>Bạn thân</strong><br>Chúc hai bạn trăm năm hạnh phúc, sớm có baby cute nha!</li>
+            <li><strong>The Viet</strong><br>Tý tuổi mà giỏi - Chúc mừng hạnh phúc hai bạn, đồng hành cùng nhau trên mọi chặng đường.</li>
+            <li><strong>Thằng em</strong><br>Chúc thằng anh trăm năm hạnh phúc, sớm sinh quý tử...</li>
           </ul>
         </div>
 
@@ -392,7 +408,7 @@
             <textarea name="message" rows="3" required placeholder="Viết vài lời yêu thương gửi đến cô dâu chú rể..."></textarea>
           </label>
           <button type="submit" class="btn btn-primary">Gửi lời chúc</button>
-          <p class="form-note">* Lời chúc sẽ hiển thị ở khung bên trái.</p>
+          <p class="form-note">* Lời chúc hiện bên cạnh*...</p>
         </form>
       </div>
     </div>
@@ -503,5 +519,37 @@
   </div>
 
   <script src="script.js"></script>
+
+    <!-- MUSIC PLAYER -->
+  <audio
+    id="bg-music"
+    src="music\i-do.mp3"
+    preload="auto"
+    loop
+  ></audio>
+
+  <button
+    id="music-toggle"
+    class="music-toggle is-muted"
+    type="button"
+    aria-label="Bật nhạc"
+  >
+    <!-- icon loa + nốt nhạc -->
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <!-- loa -->
+      <path
+        d="M5 9v6h3.5L13 18.5v-13L8.5 9H5z"
+        class="speaker"
+      />
+      <!-- sóng âm -->
+      <path
+        d="M16 9.5a3 3 0 010 5m1.8-6.8a5 5 0 010 8.6"
+        class="wave"
+        fill="none"
+        stroke-linecap="round"
+        stroke-width="1.6"
+      />
+    </svg>
+  </button>
 </body>
 </html>
